@@ -1,0 +1,209 @@
+.imageWrap {
+    display: grid;
+    place-items: center;
+    min-height: 85vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    column-gap: 20px;
+    row-gap: 2rem;
+    margin: 0 auto;
+    padding: 5vh 0;
+}
+.TrainWrap {
+    display: grid;
+    place-items: center;
+    min-height: 85vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    row-gap: 2rem;
+    margin: 0 auto;
+    padding: 5vh 0;
+}
+.imageList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.imageContent {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    margin-bottom: 5vh;
+    box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.14);
+}
+
+.imageContent button {
+    background-color: #7d67ff;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    text-align: center;
+}
+.imageContent button:hover {
+    background-color:  #9988f8;
+}
+.imageTitle {
+    display: flex;
+    justify-content: space-between;
+    min-width: 360px;
+    width: 100%;
+    border-bottom: 1px solid #7d67ff;
+    padding: 1vh;
+}
+.imageTitle input {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 300px;
+}
+.imageTitle span {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+.imageTitle span:hover {
+    color: #7d67ff;
+}
+.imageDescription {
+    min-width: 360px;
+    width: 100%;
+    border-bottom: 1px solid #7d67ff;
+    padding: 1vh;
+}
+.imageDescription textarea {
+    width: 100%;
+    resize: none;
+    overflow: hidden;
+    font-size: 1rem;
+    font-weight: 300;
+    border: none;
+}
+.imageBox {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 1vh;
+}
+.imageSampleBox {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    overflow-y:scroll
+}
+
+.imageSampleBox img {
+    width: 90px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.add {
+    padding: 2vh;
+    border: 2px dashed;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #1890ff;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+.fileDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #1890ff;
+    font-size: 2rem;
+    cursor: pointer;
+    height: 30vh;
+    margin: 3vh 0;
+}
+.getDataBtn {
+    width: 100%;
+    font-size: 1.3rem;
+}
+.selectBtn {
+    font-size: 1.1rem;
+}
+.selectDiv {
+    display: flex;
+    justify-content: center;
+}
+.selectDiv > button{
+    margin: 0 5px;
+}
+.selectDiv span {
+    display: block;
+}
+
+.imageSampleBox::-webkit-scrollbar {
+    width: 3px;
+    background: none;
+}
+.imageSampleBox::-webkit-scrollbar-thumb {
+    background: #9988f8;
+    opacity: 0.4;
+}
+.imageSampleBox::-webkit-scrollbar-track {
+    background: none;
+}
+.imageSampleBox2 {
+    width: 300px;
+    text-align: center;
+    overflow-x:scroll;
+    white-space:nowrap;
+}
+.imageSampleBox2 img {
+    width: 90px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.imageSampleBox2::-webkit-scrollbar {
+    width: 1px;
+    background: none;
+}
+.imageSampleBox2::-webkit-scrollbar-thumb {
+    background: #9988f8;
+    opacity: 0.4;
+}
+.imageSampleBox2::-webkit-scrollbar-track {
+    background: none;
+}
+/* 480px 이상 테블릿 */
+@media only screen and (min-width : 480px) {
+
+}
+/* 768px 이상 PC */
+@media only screen and (min-width : 768px) {
+   /* 3개씩 나타나야함 */
+    .imageWrap {
+        grid-template-columns: 700px 500px;
+        width: 1240px;
+    }
+    .imageList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .imageDescription, .imageTitle {
+        grid-column: 1/3;
+    }
+    .imageBox {
+        text-align: center;
+        min-width: 400px;
+    }
+    .imageSampleBox {
+        min-width: 300px;
+        height: 300px;
+    }
+    .TrainWrap {
+        grid-template-columns: 200px 300px;
+    }
+}
+
+

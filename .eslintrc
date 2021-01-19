@@ -1,0 +1,36 @@
+{
+    "parser": "@typescript-eslint/parser", // @typescript-eslint/parser
+    "extends": [
+        "plugin:react/recommended", // eslint-plugin-react
+        "plugin:@typescript-eslint/recommended", // @typescript-eslint/eslint-plugin
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended" // eslint-plugin-prettier
+    ],
+    "plugins": [
+        "react", // eslint-plugin-react
+        "@typescript-eslint", // @typescript-eslint/eslint-plugin
+        "prettier"
+    ],
+    "parserOptions": {
+        // ESLint는 es6 이후의 문법을 알지 못하기 때문에 설정
+        // https://eslint.org/docs/user-guide/configuring#specifying-parser-options
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+        "jsx": true // eslint-plugin-react
+        }
+    },
+    "rules": {
+        // 설정하고 싶은 규칙 작성
+        // 밑은 예시일 뿐, 아무거나 추가 가능
+        "prettier/prettier": ["error", { "singleQuote": true, "endOfLine": "auto"}], // eslint-plugin-prettier
+        "react/jsx-uses-vars": "error", // eslint-plugin-react
+        // React v17에서 JSX를 사용하여 파일에 import React from 'react';쓰지 않아도 OK 그러나 
+        // ESLint로 plugin:react/recommended지정하고 JSX에서 import React from 'react'이 없다고 에러
+        // 그러므로 react / react-in-jsx-scope 규칙을 off로 설정
+        "react/react-in-jsx-scope" : "off",
+        "@typescript-eslint/no-empty-interface": "error",
+        "@typescript-eslint/explicit-function-return-type" : "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+    },
+    "ignorePatterns": ["*.config.js"] // 제외하려는 파일
+}

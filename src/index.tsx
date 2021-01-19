@@ -1,14 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import { render } from 'react-dom';
+import App from 'App';
+import reportWebVitals from 'reportWebVitals';
+import { store } from 'store';
+import { Provider } from 'react-redux';
+import GlobalStyles from 'styles/GlobalStyles';
+import 'index.css';
+const rootElement = document.getElementById('root');
+render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <GlobalStyles />
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    rootElement,
 );
 
 // If you want to start measuring performance in your app, pass a function

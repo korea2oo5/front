@@ -1,0 +1,18 @@
+.footer {
+    width: 100%;
+    /* background-color: cornflowerblue; */
+    background-color: #7d67ff;
+}
+.footerBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    color: white;
+    max-width: 1240px;
+    margin: 0 auto;
+    height:5vh;
+}
+.footer div {
+    font-size: 1.5rem;
+}

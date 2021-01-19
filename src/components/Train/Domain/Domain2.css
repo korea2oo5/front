@@ -1,0 +1,214 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.domainWrap {
+    display: grid;
+    place-items: center;
+    min-height: 85vh;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    column-gap: 20px;
+    row-gap: 2rem;
+    margin: 0 auto;
+    padding: 5vh 0;
+}
+.domainContent {
+    box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.14);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.domainTableWrap {
+    box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.14);
+    flex: 9.5;
+    width: 650px;
+}
+.domainHeader {
+    padding: 10px;
+}
+.domainColWrap {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+}
+.domainTitle {
+    margin: 10px 0;
+}
+.domainTitle input {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.file_msg {
+    float: left;
+    line-height: 30px;
+    border: 1px dashed #1890ff;
+    padding: 0 5px;
+}
+.domainFileUpload button {
+    line-height: 30px;
+    background-color: #7d67ff;
+    color: #fff;
+    font-weight: bold;
+}
+.domainTableContent {
+    margin: 1vh;
+    box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.14);
+}
+.domainTable {
+    display: block;
+    overflow: auto;
+}
+.domainTable::-webkit-scrollbar {
+    width: 1px;
+    background: none;
+}
+.domainTable::-webkit-scrollbar-thumb {
+    background: #e8f0fe;
+    opacity: 0.4;
+}
+.domainTable::-webkit-scrollbar-track {
+    background: none;
+}
+.th {
+    background-color: #e8f0fe;
+}
+.tr:nth-child(even) {
+    background-color: #e8e8e8e8;
+}
+
+.tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+.td {
+    min-width: 9vh;
+    max-width: 10vh;
+}
+.td:nth-child(1), .th:nth-child(1) {
+    width: 7vh;
+}
+.td,
+.th {
+    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 5px;
+}
+.tableInput {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+    line-height: 24px;
+    padding: 8px;
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+}
+.icon {
+    font-size: 2.5rem;
+    color: #7d67ff;
+    cursor: pointer;
+    margin: 5px;
+}
+.btnCenter {
+    text-align: center;
+}
+.domainH2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #7d67ff;
+    margin-bottom: 10px;
+}
+.resultWrap {
+    box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.14);
+    width: 100%;
+    height: 100%;
+}
+.contentWrap {
+    box-shadow: 0px 1px 4px 0px rgba(1, 1, 1, 0.14);
+    margin: 10px;
+}
+.preview {
+    font-size: 1rem;
+    text-align: end;
+    padding: 10px;
+    color: #888;
+}
+.subject {
+    font-size: 1.2rem;
+    padding: 10px;
+    font-weight: bold;
+}
+.tableGroup {
+    text-align: center;
+    background-color: #e8f0fe;
+    margin: 1vh 0.5vh;
+}
+.tableGroupBorder {
+    border-bottom: 1px solid #fff;
+}
+.tableGroupBorder2 {
+    border-right: 1px solid #fff;
+}
+.userInput {
+    font-weight: bold;
+    background: transparent;
+    width: 50%;
+}
+.runButtonDiv, .buildButtonDiv, .linkButtonDiv {
+    text-align: end;
+}
+.runButton, .buildButton, .linkButton {
+    line-height: 30px;
+    background: #7d67ff;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+.userResultWrap {
+    margin: 10px;
+}
+.userResult {
+    display: flex;
+    flex-direction: row;
+}
+.userResultTitle {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.userResult div {
+    flex: 0.2;
+    text-align: end;
+}
+.userResult progress {
+    flex: 0.8;
+}
+
+.tableTextarea {
+    box-sizing: border-box;
+	border: none;
+	resize: none;
+	line-height: 24px;
+    padding: 8px;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+/* 480px 이상 테블릿 */
+@media only screen and (min-width : 480px) {
+
+}
+/* 768px 이상 PC */
+@media only screen and (min-width : 768px) {
+   /* 3개씩 나타나야함 */
+    .domainWrap {
+        grid-template-columns: 700px 200px 300px;
+        width: 1240px;
+    }
+}
